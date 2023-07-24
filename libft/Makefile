@@ -6,53 +6,55 @@
 #    By: tdutel <tdutel@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/14 11:42:08 by tdutel            #+#    #+#              #
-#    Updated: 2022/11/22 11:23:11 by tdutel           ###   ########.fr        #
+#    Updated: 2023/07/24 15:17:04 by tdutel           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+# Nom de la bibliothèque
 NAME = libft.a
-HEADER = libft.h
+HEADER = includes/
+# Compilateur et options
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
-SRC = 	ft_atoi.c		ft_bzero.c		ft_calloc.c		ft_isalnum.c	\
-		ft_isalpha.c	ft_isascii.c	ft_isdigit.c	ft_isprint.c	\
-		ft_itoa.c		ft_memchr.c		ft_memcmp.c		ft_memcpy.c		\
-		ft_memmove.c	ft_memset.c		ft_putchar_fd.c	ft_putendl_fd.c	\
-		ft_putnbr_fd.c	ft_putstr_fd.c	ft_split.c		ft_strchr.c		\
-		ft_strdup.c		ft_striteri.c	ft_strjoin.c	ft_strlcat.c	\
-		ft_strlcpy.c	ft_strlen.c		ft_strmapi.c	ft_strncmp.c	\
-		ft_strnstr.c	ft_strrchr.c	ft_strtrim.c	ft_substr.c		\
-		ft_tolower.c	ft_toupper.c
 
-SRCB = 	ft_lstadd_back_bonus.c	ft_lstadd_front_bonus.c	ft_lstmap_bonus.c	\
-		ft_lstlast_bonus.c		ft_lstnew_bonus.c		ft_lstsize_bonus.c	\
-		ft_lstdelone_bonus.c	ft_lstclear_bonus.c		ft_lstiter_bonus.c
+# Dossiers sources
+SRC_DIR = check_fct mem_fct print_fct str_fct linked_list_fct
 
-OBJ = $(SRC:.c=.o)
+# Dossiers objets
+OBJ_DIR = bin
 
-BONUS = $(SRCB:.c=.o)
+# Fichiers sources
+SRC_FILES = $(foreach dir,$(SRC_DIR),$(wildcard $(dir)/*.c))
+
+# Noms des fichiers objets)
+OBJ_FILES = $(patsubst %.c,$(OBJ_DIR)/%.o,$(SRC_FILES))
 
 
+# Règle par défaut
+all: $(NAME)
 
-all : $(NAME)
+# Règle pour la bibliothèque
+$(NAME): $(OBJ_FILES)
+	ar rcs $@ $^
 
-$(NAME) : $(OBJ)
-	ar rcs $(NAME) $(OBJ)
+# Règle pour les fichiers objets
+$(OBJ_DIR)/%.o: %.c
+	@mkdir -p $(@D)
+	$(CC) $(CFLAGS) -c -o $@ $<
 
-%.o : %.c $(HEADER) Makefile
-	$(CC) -I $(HEADER) $(CFLAGS) -o $@ -c $<
+# Création du dossier pour les objets
+$(OBJ_DIR):
+	mkdir -p $(OBJ_DIR)
 
-clean :
-	rm -f $(OBJ) $(BONUS)
+# Règle de nettoyage
+clean:
+	rm -rf $(OBJ_DIR)
 
-fclean : clean
+# Règle de nettoyage complet
+fclean: clean
 	rm -f $(NAME)
 
 re : fclean all
 
-bonus : $(BONUS) $(NAME)
-	$(CC) $(CFLAGS) -c $(SRCB)
-	ar -q $(NAME) $(BONUS)
-	
-
-.PHONY: all clean fclean re bonus
+# Pour permettre l'utilisation de "clean" et "fclean" même s'il existe des fichiers portant ces noms
+.PHONY: all clean fclean re
