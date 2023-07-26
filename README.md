@@ -48,19 +48,14 @@ git clone https://github.com/tdutel/Cercle0.git
 cd Cercle0/libft
 make
 ```
-- Élément 1
-- Élément 2
-- Élément 3
+A libft.a will appear. Now you can add this file in your project in order to use all these functions.
 
-1. Étape 1
-2. Étape 2
-3. Étape 3
+#### Disclaimer
+> This project is a part of the 42-Cursus curriculum and is intended for educational purposes. If you are a current student of 42, we strongly advise you not to copy this project or submit it as your own work, as it goes against the school's academic integrity policy.
 
 **Texte en gras**
 *Texte en italique*
 [Texte du lien](URL_du_lien)
 ![Texte alternatif](URL_de_l_image)
-
-> Ceci est une citation.---separate
 
 ![Build Status](https://img.shields.io/github/workflow/status/nom_utilisateur/nom_repository/Nom_du_workflow)
