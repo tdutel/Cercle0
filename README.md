@@ -20,3 +20,21 @@ Libft
 > Ceci est une citation.---separate
 
 ![Build Status](https://img.shields.io/github/workflow/status/nom_utilisateur/nom_repository/Nom_du_workflow)
+
+## Sommaire
+
+- [Introduction](#introduction)
+- [Libft functions](#libft-function)
+- [Usage](#usage)
+
+## Introduction <a name="introduction"></a>
+
+"Libft is the first project at 42. It's an individual project that consists of creating a library with standard C library functions, as well as other additional functions. This project is intended to be used throughout the curriculum. view [subject](URL_du_lien)"
+
+## Problématique <a name="problematique"></a>
+
+Ici, nous aborderons la problématique que ce projet vise à résoudre et expliquer son importance.
+
+## Plan d'action <a name="plan-daction"></a>
+
+Dans cette section, nous détaillerons le plan d'action étape par étape pour la réalisation du projet.
