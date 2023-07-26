@@ -29,7 +29,7 @@ Libft
 
 ## Introduction <a name="introduction"></a>
 
-"Libft is the first project at 42. It's an individual project that consists of creating a library with standard C library functions, as well as other additional functions. This project is intended to be used throughout the curriculum. view [subject](URL_du_lien)"
+"Libft is the first project at 42. It's an individual project that consists of creating a library with standard C library functions, as well as other additional functions. This project is intended to be used throughout the curriculum. view [subject](https://github.com/tdutel/Cercle0/blob/main/libft_subject.pdf)"
 
 ## Problématique <a name="problematique"></a>
 
