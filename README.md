@@ -41,11 +41,11 @@ Libft is the first project at 42. It's an individual project that consists of cr
 
 ## Usage <a name="usage"></a>
 
-1. Copy link
+1. Copy link : https://github.com/tdutel/Cercle0.git
 2. tap in terminal :
 ```
-git clone 
-cd Cercle0/
+git clone https://github.com/tdutel/Cercle0.git
+cd Cercle0/libft
 make
 ```
 - Élément 1
