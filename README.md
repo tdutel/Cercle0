@@ -32,7 +32,7 @@ Libft is the first project at 42. It's an individual project that consists of cr
 |  ft_isprint  |  ft_memmove  |  ft_putstr_fd  |  ft_strlcat  |  ft_lstlast_bonus  |
 |  |  ft_memset  |  ft_tolower  |  ft_strlcpy  |  ft_lstmap_bonus  |
 |  |  |  ft_toupper   |  ft_strlen  | ft_lstnew_bonus  |
-|  |  |  |  ft_strmapi  |  ft_lstsize_bonus  |  fprime  |
+|  |  |  fprime  |  ft_strmapi  |  ft_lstsize_bonus  |
 |  |  |  |  ft_strncmp  |
 |  |  |  |  ft_strnstr  |
 |  |  |  |  ft_strrchr  |
