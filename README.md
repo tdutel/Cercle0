@@ -1,7 +1,7 @@
 ### tdutel
 # Libft
 
-## Sommaire
+## Summary
 
 - [Introduction](#introduction)
 - [Libft functions](#libft-functions)
